@@ -22,6 +22,17 @@ namespace ShopKaro.Controllers
         {
             return View();
         }
+        public IActionResult Angular()
+        {
+            return Redirect("http://localhost:4200");
+        }
+
+        public IActionResult WantToSignUp()
+        {
+            return RedirectToAction("SignUp","Auth");
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
