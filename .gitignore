@@ -323,3 +323,7 @@ typings/
 .serverless
 
 .idea
+
+# Ignore DB-Browser files
+*.db-shm
+*.db-wal
