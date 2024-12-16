@@ -1,0 +1,35 @@
+﻿@model ShopKaro.Models.User.User
+
+<h2>Sign Up</h2>
+
+<form method="post" asp-action="SignUp">
+    <div>
+        <label>Username</label>
+        <input type="text" asp-for="UserName" required />
+        <span asp-validation-for="UserName" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="email" asp-for="Email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Phone Number</label>
+        <input type="number" asp-for="PhoneNumber" required />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" asp-for="Password" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <button type="submit">Sign Up</button>
+</form>
+
+<p>Already have an account? <a asp-controller="Auth" asp-action="Login">Login here</a>.</p>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+}
